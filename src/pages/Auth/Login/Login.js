@@ -18,7 +18,10 @@ function Login() {
             console.log(res.token);
             localStorage.setItem("token", res.token);
             navigate("/home");
-        });
+        })
+        .catch((error) => {
+            alert("Credenziali errate");
+          });
     }
 
     function handleChange(event) {
@@ -46,4 +49,3 @@ function Login() {
 }
 
 export default Login;   
-
